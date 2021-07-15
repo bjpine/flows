@@ -1,0 +1,28 @@
+{
+    "groups" : [
+        {
+            "group_id" : "LINE",
+            "required" : true,
+            "repeating" : true,
+            "items" : [
+                {
+                    "key" : "LINE_POS1",
+                    "domain" : "CHAR",
+                    "position" : 1
+                }
+            ]
+        },
+        {
+            "group_id" : "SUBLINE",
+            "required" : false,
+            "repeating" : true,
+            "items" : [
+                {
+                    "key" : "LINE_POS1",
+                    "domain" : "CHAR",
+                    "position" : 1
+                }
+            ]
+        }
+    ]
+}

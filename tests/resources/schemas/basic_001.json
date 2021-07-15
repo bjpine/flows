@@ -1,0 +1,13 @@
+{
+    "LINE" : {
+        "required" : true,
+        "repeating" : true,
+        "items" : [
+            {
+                "key" : "LINE_POS1",
+                "domain" : "CHAR",
+                "position" : 1
+            }
+        ]
+    }
+}

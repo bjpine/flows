@@ -1,0 +1,18 @@
+{
+    "LINE": [
+        {
+            "LINE_POS1" : "Line 1",
+            "SUBLINE" : [
+                {
+                    "SUBLINE_POS1" : "Line 1 Subline 1"
+                },
+                {
+                    "SUBLINE_POS1" : "Line 1 Subline 2"
+                }
+            ]
+        },
+        {
+            "LINE_POS1" : "Line 2"
+        }
+    ]
+}

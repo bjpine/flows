@@ -1,0 +1,21 @@
+{
+    "LINE" : {
+        "required" : false,
+        "repeating" : true,
+        "items" : [
+            {
+                "key" : "LINE_POS1",
+                "domain" : "CHAR",
+                "position" : 1
+            }
+        ]
+    },
+    "SUBLINE" : {
+        "required" : false,
+        "repeating" : true,
+        "parent" : "LINE",
+        "SUBLINE_POS1" : {
+            "domain" : "CHAR"
+        }
+    }
+}
