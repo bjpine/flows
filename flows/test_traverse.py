@@ -1,6 +1,10 @@
 import unittest
-import flows
-
+from flows.traverse import match_path, \
+    to_path, \
+    traverse, \
+    traverse_add_item, \
+    validate_item, \
+    add_item
 
 class TestTraverse(unittest.TestCase):
     
@@ -22,7 +26,7 @@ class TestTraverse(unittest.TestCase):
             with self.subTest(path=path, 
                               target_path=target_path, 
                               result=result):
-                self.assertTrue(flows.match_path(path, target_path) == result)
+                self.assertTrue(match_path(path, target_path) == result)
     
     def test_to_path(self):
 
@@ -51,7 +55,7 @@ class TestTraverse(unittest.TestCase):
             with self.subTest(schema=schema, 
                               key=key, 
                               result=result):
-                self.assertEqual(flows.to_path(schema, key), result)
+                self.assertEqual(to_path(schema, key), result)
 
     def test_traverse(self):
 
@@ -79,7 +83,7 @@ class TestTraverse(unittest.TestCase):
             with self.subTest(obj=obj, 
                               callback=callback, 
                               result=result):
-                self.assertEqual(flows.traverse(obj, callback=callback), result)
+                self.assertEqual(traverse(obj, callback=callback), result)
 
     def test_traverse_add_item(self):
         schema = {'k':{"repeating":False, "parent":None}}
@@ -94,7 +98,7 @@ class TestTraverse(unittest.TestCase):
                               key=key,
                               item=item,
                               result=result):
-                self.assertEqual(flows.traverse_add_item(obj, schema, key, item), result)
+                self.assertEqual(traverse_add_item(obj, schema, key, item), result)
 
     def test_validate_item(self):
 
@@ -108,7 +112,7 @@ class TestTraverse(unittest.TestCase):
                               item=item,
                               schema=schema,
                               result=result):
-                self.assertEqual(flows.validate_item(key, item, schema), result)
+                self.assertEqual(validate_item(key, item, schema), result)
 
     def test_add_item(self):
 
@@ -123,6 +127,6 @@ class TestTraverse(unittest.TestCase):
                               key=key,
                               item=item,
                               result=result):
-                self.assertEqual(flows.add_item(value, key, item), result)
+                self.assertEqual(add_item(value, key, item), result)
 
     

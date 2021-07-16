@@ -1,3 +1,5 @@
+def transform():
+    print("hello there")
 
 def traverse(obj: dict, path: list=None, callback: callable=None,
              **kwargs) -> dict:
